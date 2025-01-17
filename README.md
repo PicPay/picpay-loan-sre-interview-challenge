@@ -1,83 +1,196 @@
-# TESTE QA SENIOR
-### Objetivo
-Avaliar a habilidade do candidato em configurar um ambiente de testes, utilizar Git e aplicar conhecimentos básicos de Appium ou Cypress e Javascript.
+# PicPay Loan Automation Test Project
 
-### Cenário
-**Aplicativo**: Acessar a nossa landing page - https://meus-emprestimos.picpay.com/ (poderá ser via navegador ou mobile) com um formulário de login.
+![Cypress](https://img.shields.io/badge/Cypress-E2E%20Tests-04C38E?style=flat&logo=cypress)  
+Projeto de automação de testes para a página de empréstimos do PicPay. Este projeto foi desenvolvido utilizando o **Cypress**, com integração ao **Mochawesome Reporter** para geração de relatórios detalhados com screenshots.
 
-### Tarefa
-- Criar um teste automatizado que:
-- Abra o navegador a sua escolha.
-- Abre o site, navegue na área não logada;
-- Preencha o formulário de cadastro;
-- Clique no botão de login.
-- Verifique se o usuário foi redirecionado para a tela inicial ou tela de erro.
-- Gerar evidências das navegações.
+---
 
-### Instruções para o Candidato
-- Fork do repositório: 
-O candidato deverá criar um fork de um repositório GitHub com o projeto do aplicativo e o framework de testes (Appium ou Cypress) já configurado.
+## 📂 Estrutura do Projeto
 
-- Configuração do ambiente: 
-O candidato deverá configurar seu ambiente de desenvolvimento com as ferramentas necessárias para executar os testes (Node.js, npm, etc.).
+```bash
+.
+├── cypress/
+│   ├── e2e/                         # Tests E2E
+│   │   └── loan-lp.spec.cy.js       # Testes da landing page de empréstimos
+│   ├── fixtures/                    # Arquivos reutilizáveis de dados (ex: textos)
+│   │   └── texts.json               # Textos esperados na aplicação
+│   ├── support/                     # Suporte ao Cypress
+│   │   ├── commands.js              # Comandos customizados no Cypress
+│   │   ├── e2e.js                   # Configurações para testes E2E
+│   │   └── selectors.js             # Seletores da aplicação
+│   ├── output/                      # Relatórios gerados após execução
+│       ├── screenshots/             # Capturas de tela organizadas por timestamp
+│       └── reports/                 # Relatórios JSON e HTML
+├── cypress.config.js                # Configurações do Cypress
+├── package.json                     # Informações e scripts do projeto
+└── README.md                        # Documentação do projeto
+```
 
-- Criação do teste: 
-O candidato deverá criar um novo arquivo de teste e implementar o cenário descrito acima.
+---
 
-- Execução do teste: O candidato deverá executar o teste e verificar se ele passa.
+## 🛠️ Funcionalidades
 
-- Commit e push: 
-O candidato deverá commitar as alterações e fazer um push para o seu fork.
+- **Testes Responsivos:** Verifica a interface da página em resoluções desktop e mobile (**iPhone X**).
+- **Cobertura:** Inclui validações de layout, alertas de erro e comportamento não permitido de navegação.
+- **Screenshots Automáticas:** Captura screenshots para cada teste e organiza-as com base em timestamps únicos.
+- **Relatórios Detalhados:** Geração automática de relatórios em HTML, exibindo resultados dos testes com logs e imagens embutidas.
 
-- Envio do link: 
-O candidato deverá enviar o link do seu fork para que a equipe possa avaliar o código.
+---
 
-- Repositório Base:
-Para simplificar a avaliação, você pode criar um repositório base no GitHub com o seguinte conteúdo:
+## ⚙️ Pré-requisitos
 
-- Aplicativo: 
-Um aplicativo mobile simples (React Native, Flutter ou outro framework) com um formulário de login.
+Certifique-se de que você possui as seguintes ferramentas instaladas:
 
-- Framework de testes:
-Uma estrutura básica de testes com Appium ou Cypress, incluindo configurações e exemplos de testes.
+- **Node.js:** Versão 18 ou superior.
+- **npm:** Gerenciador de pacotes para Node.js.
+- **Cypress:** Instalado automaticamente via `npm`.
 
-- README:
-Um arquivo README com instruções detalhadas sobre como configurar o ambiente, executar os testes e enviar a solução.
+---
 
-## Teste Prático - Engenheiro de Qualidade Senior
-### Instruções
+## 🚀 Como Rodar o Projeto
 
-1. **Fork este repositório:** Clique no botão "Fork" no canto superior direito.
-2. **Clone o seu fork:** `git clone https://github.com/seu_usuario/teste-pratico.git`
-3. **Instale as dependências:** `npm install`
-4. **Crie um novo arquivo de teste:** `testes/login_test.js` (ou similar)
-5. **Implemente o teste:** Siga as instruções acima para criar o teste automatizado.
-6. **Execute os testes:** `npm test`
-7. **Faça um commit e push:**
+1. Instale as dependências:
    ```bash
-   git add .
-   git commit -m "Implementação do teste de login"
-   git push origin main
-Envie o link do seu fork: Envie o link do seu repositório para a equipe de recrutamento.
-Estrutura do Projeto
-app: Caso utilize mobile através de emulador - Contém o código fonte do aplicativo.
-testes: Contém os arquivos de teste.
-package.json: Lista as dependências do projeto.
+   npm install
+   ```
 
+2. Abra o Cypress para execução manual:
+   ```bash
+   npm run cypress:open
+   ```
 
+3. Execute os testes automaticamente em modo headless:
+   ```bash
+   npm run cypress:run
+   ```
 
-Dicas
-- Utilize os comentários para explicar o seu código.
-- Siga as boas práticas de desenvolvimento de testes.
-- Divida o teste em etapas menores para facilitar a leitura e a manutenção.
-- Avaliação:
-- A avaliação do teste prático poderá considerar os seguintes aspectos:
-- Correção do código: O teste executa corretamente o cenário proposto?
-- Qualidade do código: O código está bem estruturado, comentado e segue boas práticas?
-- Uso do framework: O candidato demonstra conhecimento do framework escolhido (Appium ou Cypress)?
-- Criatividade: O candidato apresentou alguma solução inovadora ou diferente?
-- Observações:
-- Flexibilidade: Adapte o nível de complexidade do teste de acordo com o perfil do candidato e a experiência desejada.
-- Personalização: Você pode adicionar outros cenários de teste para avaliar diferentes habilidades (por exemplo, testes de API, testes de performance).
-- Ferramentas: Utilize ferramentas de code review para facilitar a avaliação do código.
-- Com este teste prático, você poderá avaliar de forma mais precisa as habilidades técnicas e a capacidade de resolução de problemas dos candidatos.
+---
+
+## 📊 Visualizando os Relatórios
+
+Ao executar os testes (`npm run cypress:run`), o projeto gera automaticamente um relatório no formato HTML. Para visualizar:
+
+1. Abra o diretório de relatórios:
+   ```bash
+   output/reports/
+   ```
+
+2. Localize o arquivo HTML:
+   ```bash
+   index.html
+   ```
+
+3. Abra o arquivo em qualquer navegador para visualizar os detalhes do relatório com informações sobre testes, capturas de tela e gráficos de resultados.
+
+---
+
+## 🧪 Descrição dos Testes
+
+### Arquivo: `loan-lp.spec.cy.js`
+O arquivo de testes automatiza o seguinte fluxo da página de **empréstimos** do PicPay:
+
+1. **Validação de Textos na Página Inicial**
+   - Garante que os textos do cabeçalho, subtítulo e ajuda estão corretos.
+   - Gera screenshots para confirmar a visualização.
+
+2. **Validação dos Alertas de Erro**
+   - Testa entradas inválidas no campo CPF.
+   - Confirma o comportamento do botão e exibe mensagens de erro (*obrigatório* e *CPF inválido*).
+   - Captura screenshots a cada estado do teste.
+
+3. **Validação de Restrições de Acesso**
+   - Simula um envio de CPF inválido e garante que chamadas API retornam erro **401 (Unauthorized)**.
+
+---
+
+## 🛠️ Custom Commands
+
+Comandos reutilizáveis definidos em **`commands.js`** para simplificar a automação:
+
+- **`cy.visitLoanPage()`**: Navega para a página inicial da aplicação.
+- **`cy.fillCpfAndSubmit(cpf)`**: Insere um CPF no campo do formulário e submete.
+- **`cy.validateError(selector, message)`**: Valida se um elemento exibe a mensagem de erro esperada.
+
+---
+
+## 🖼️ Organização de Screenshots
+
+As capturas de tela são organizadas automaticamente no diretório **screenshots**, com timestamps exclusivos por execução. Exemplo de estrutura:
+
+```bash
+output/screenshots/<YYYY-MM-DD_HH-mm-ss>/
+└── loan-lp.spec.cy.js/
+    ├── textos-pagina-nao-logada.png
+    ├── campo-cpf-inicial.png
+    ├── campo-cpf-obrigatorio.png
+    └── erro-acesso-401.png
+```
+
+---
+
+## 💡 Configurações Relevantes
+
+### Arquivo: `cypress.config.js`
+
+- **Base URL:**
+  ```javascript
+  baseUrl: 'https://meus-emprestimos.picpay.com'
+  ```
+
+- **Relatórios Dinâmicos com Timestamps:**
+  ```javascript
+  const timestamp = dayjs().format("YYYY-MM-DD_HH-mm-ss")
+  screenshotsFolder: `output/screenshots/${timestamp}`,
+  reporterOptions: {
+    reportDir: `output/reports`,
+    embeddedScreenshots: true,
+    charts: true,
+  }
+  ```
+
+---
+
+## 📦 Scripts do Projeto
+
+Os scripts configurados no **`package.json`** incluem:
+
+- **Executar o Cypress manualmente:**
+  ```bash
+  npm run cypress:open
+  ```
+
+- **Executar os testes automaticamente (headless):**
+  ```bash
+  npm run cypress:run
+  ```
+
+- **Mesclar JSONs e gerar relatório final manualmente:**
+  (Opcional para execuções separadas)
+  ```bash
+  npm run report
+  ```
+
+---
+
+## 📚 Dependências
+
+O projeto utiliza as seguintes ferramentas e bibliotecas:
+
+- **[Cypress](https://www.cypress.io/):** Framework de testes end-to-end.
+- **[Cypress Mochawesome Reporter](https://github.com/lukejpreston/cypress-mochawesome-reporter):** Plugin para relatórios detalhados com gráficos e screenshots.
+- **[Day.js](https://day.js.org/):** Biblioteca para manipulação de datas (ex. timestamp).
+
+Para instalação das dependências:
+```bash
+npm install
+```
+
+---
+
+## 🧩 Considerações Finais
+
+Este projeto tem como objetivo demonstrar boas práticas de automação utilizando o **Cypress** com relatórios detalhados e captura de evidências por testes. Está pronto para ser escalado e adaptado conforme os requisitos cresçam.
+
+Se você tiver dúvidas ou sugestões, sinta-se à vontade para entrar em contato!
+
+🚀 **Obrigada!**

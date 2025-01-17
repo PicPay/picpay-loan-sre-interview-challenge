@@ -1,0 +1,8 @@
+{
+  "pageTitle": "Gerencie seus contratos",
+  "pageSubtitle": "Aqui você consegue consultar e escolher formas de pagamento dos seus contratos de Empréstimo Pessoal, Empréstimo com FGTS e Empréstimo Consignado do PicPay Bank.",
+  "formParagraph": "Acesse com seu CPF",
+  "helpText": "Se tiver dúvidas, acesse a Central de Ajuda.",
+  "requiredFieldError": "*Campo obrigatório",
+  "invalidCpfError": "*CPF Inválido"
+}

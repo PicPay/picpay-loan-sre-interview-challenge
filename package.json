@@ -1,0 +1,21 @@
+{
+  "name": "picpay-loan-sre-interview-challenge",
+  "version": "1.0.0",
+  "description": "Avaliar a habilidade do candidato em configurar um ambiente de testes, utilizar Git e aplicar conhecimentos básicos de Appium ou Cypress e Javascript.",
+  "main": "index.js",
+  "scripts": {
+    "cypress:open": "npx cypress open",
+    "cypress:run": "npx cypress run --quiet --headless --browser=electron",
+    "report": "npx mochawesome-merge output/reports/*.json -o output/reports/merged.json && npx marge output/reports/merged.json --reportDir output/reports --inline"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cypress": "^13.17.0",
+    "dayjs": "^1.11.13"
+  },
+  "devDependencies": {
+    "cypress-mochawesome-reporter": "^3.8.2"
+  }
+}
