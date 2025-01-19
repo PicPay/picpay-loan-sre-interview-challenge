@@ -1,0 +1,16 @@
+{
+  "name": "desafio-tecnico",
+  "version": "1.0.0",
+  "description": "Avaliar a habilidade do candidato em configurar um ambiente de testes, utilizar Git e aplicar conhecimentos básicos de Cypress e Javascript.",
+  "main": "index.js",
+  "scripts": {
+    "runner": "cypress open",
+    "html-report": "cypress run --headed"
+  },
+  "author": "Alan Yasuhiro Nishida",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^14.0.0",
+    "cypress-mochawesome-reporter": "^3.8.2"
+  }
+}
